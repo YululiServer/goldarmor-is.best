@@ -12,5 +12,6 @@ AddType text/javascript .js
 </Files>
 
 RewriteEngine on
-RewriteRule ^(.*\.git)$ https://github.com/acrylic-style/$1 [R=301]
+RewriteRule ^git(|hub)$ https://github.com/acrylic-style/goldarmor-is.best [R=302,L]
+RewriteRule ^(.*\.git)$ https://github.com/acrylic-style/$1 [R=302]
 Header set Access-Control-Allow-Origin "*"
