@@ -1,0 +1,16 @@
+<FilesMatch ".html|.php">
+        SetHandler application/x-httpd-php
+</FilesMatch>
+
+AddType text/css .css
+AddType text/javascript .js
+<Files "*.js">
+  ForceType application/javascript
+</Files>
+<Files "*.css">
+  ForceType text/css
+</Files>
+
+RewriteEngine on
+RewriteRule ^(.*\.git)$ https://github.com/acrylic-style/$1 [R=301]
+Header set Access-Control-Allow-Origin "*"
