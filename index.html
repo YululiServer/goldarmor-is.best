@@ -40,6 +40,9 @@
       Object.keys(defs).forEach(k => {
         const v = defs[k]
         const img = document.createElement('img')
+        img.classList.add('materialBoxed')
+        img.width = 600
+        img.height = 500
         img.src = k
         const span = document.createElement('span')
         span.classList.add('card-title')
@@ -60,6 +63,10 @@
         row.classList.add('row')
         row.appendChild(div2)
         document.getElementById('container').appendChild(row)
+      })
+      document.addEventListener('DOMContentLoaded', function() {
+        const elems = document.querySelectorAll('.materialboxed');
+        const instances = M.Materialbox.init(elems, options);
       })
     </script>
   </body>
