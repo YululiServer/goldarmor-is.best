@@ -6,31 +6,58 @@
     <title>こうたちゃんの金装備は神！</title>
   </head>
   <body>
-    <div class="container row">
-      <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://img.acrylicstyle.xyz/upload/348431217/115091910/2020-02-03_18.24.41.png">
-              <span class="card-title">Kouta1212 in Rushのマップ</span>
-            </div>
-            <div class="card-content">
-              <p>by れにょこ</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12 m7">
-          <div class="card">
-            <div class="card-image">
-              <img src="https://img.acrylicstyle.xyz/upload/348431217/832101213/2020-02-02_21.26.10.png">
-              <span class="card-title">Kouta1212 in Mapperサーバー</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="container" id="container">
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script type="text/javascript">
+      const defs = {
+        "https://cdn.discordapp.com/attachments/520239314270158857/665891428974592002/kouta2.png": "Kouta1212 in Rush",
+        "https://cdn.discordapp.com/attachments/520239314270158857/666154609877712896/2020-01-10_01.31.15.png": "Kouta1212 in サバイバルサーバー",
+        "https://cdn.discordapp.com/attachments/520239314270158857/666154652961734697/2020-01-10_01.30.43.png": "Kouta1212 in サバイバルサーバー",
+        "https://cdn.discordapp.com/attachments/520239314270158857/666278568862416896/2020-01-07_22.29.57.png": "Kouta1212 in Rush",
+        "https://cdn.discordapp.com/attachments/520239314270158857/666279165447897094/kouta.png": "Kouta1212 in CoreBreakingPVP",
+        "https://cdn.discordapp.com/attachments/520239314270158857/671334432392740885/2020-01-19_16.47.28.png": "Kouta1212 in KartRace",
+        "https://cdn.discordapp.com/attachments/520239314270158857/666619387977138192/2020-01-14_21.27.04.png": "Kouta1212 in Rush",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673495732484964362/2020-02-02_20.51.22.png": "Kouta1212 in Mapperサーバー",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673504462522023946/2020-02-02_21.26.10.png": "Kouta1212 with Sand in Mapperサーバー",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673505279899336722/2020-01-30_23.59.11.png": "Kouta1212 in VillagerDefence",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673505293929414669/2020-01-30_23.56.15.png": "Kouta1212 in VillagerDefence",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673505392084385832/2020-02-02_18.39.38.png": "",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673505439396397096/2020-01-25_22.07.25.png": "Kouta1212 in CoreBreakingPVP",
+        "https://cdn.discordapp.com/attachments/520239314270158857/673505506274443304/2020-01-21_18.18.57.png": "Kouta1212 in サバイバルサーバー",
+        "https://cdn.discordapp.com/attachments/662654151552925732/666622055818592256/2020-01-14_21.32.08.png": "Kouta1212 in Rush",
+        "https://cdn.discordapp.com/attachments/568065891174973440/670616805185683476/2020-01-25_22.05.11.png": "Kouta1212 in CoreBreakingPVP",
+        "https://media.discordapp.net/attachments/543092075336433681/688248081459839002/2020-03-14_134452.png": "",
+        "https://media.discordapp.net/attachments/665834607043674133/688247597051412582/2020-03-14_13.46.16.png": "",
+        "https://media.discordapp.net/attachments/665834607043674133/688247916644925473/2020-02-15_14.58.35.png": "Kouta1212 in CoreBreakingPVP",
+        "https://cdn.discordapp.com/attachments/665808200381235210/692373165208502282/2020-03-19_15.09.45.png": "osu__player in 逃走中",
+        "https://cdn.discordapp.com/attachments/543092075336433681/692375724652363816/2020-03-05_21.48.47.png": "Tokyo_2020 in ???",
+        "https://img.acrylicstyle.xyz/upload/348431217/115091910/2020-02-03_18.24.41.png": "Kouta1212 in Rush"
+      }
+      Object.keys(defs).forEach(k => {
+        const v = defs[k]
+        const img = document.createElement('img')
+        img.src = k
+        const span = document.createElement('span')
+        span.classList.add('card-title')
+        span.textContent = v
+        const div4 = document.createElement('div')
+        div4.appendChild(img)
+        div4.appendChild(span)
+        div4.classList.add('card-image')
+        const card = document.createElement('div')
+        card.classList.add('card')
+        card.appendChild(div4)
+        const div2 = document.createElement('div')
+        div2.classList.add('col')
+        div2.classList.add('s12')
+        div2.classList.add('m7')
+        div2.appendChild(card)
+        const row = document.createElement('div')
+        row.classList.add('row')
+        row.appendChild(div2)
+        document.getElementById('container').appendChild(row)
+      })
+    </script>
   </body>
 </html>
